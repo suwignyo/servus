@@ -1,0 +1,30 @@
+.background-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-box-container {
+    width: 100%;
+    min-height: 70vh;
+    background-image: url("../../assets/background-image.png");
+    background-size: auto;
+}
+
+.search-box{
+    margin-top: 80px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.bottom {
+    display: flex;
+    background-color: #cffcff;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh
+}
+
+.bottom p {
+    font-size: 5rem;
+}
