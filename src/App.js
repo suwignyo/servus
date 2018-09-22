@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./App.css";
 import { testingRedux } from "./actions/userActions";
-import MainMap from "./components/MainMap";
 import Main from "./components/Main/";
-
-
+import MainMap from "./components/MainMap";
+import { Router } from "@reach/router";
 
 class App extends Component {
     componentDidMount() {
@@ -15,29 +14,20 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                <Main />
-
-                    <h1 className="App-title">Welcome to Servus</h1>
-                </header>
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to
-                    reload.
-                </p>
-                <div>
-                <MainMap />
-                </div>
+                <Router>
+                    <Main path="/" />
+                    <MainMap path="/search" />
+                </Router>
             </div>
         );
     }
-  }
-
+}
 
 const mapStateToProps = state => ({
-  user: state.user.test
+    user: state.user.test
 });
 
 export default connect(
-  mapStateToProps,
-  { testingRedux }
+    mapStateToProps,
+    { testingRedux }
 )(App);
