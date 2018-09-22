@@ -15,7 +15,6 @@ class SelectLanguage extends Component {
                 <Select
                     options={this.props.languageOptions}
                     onChange={this.handleLanguageChange}
-                    placeholder="Select a Language.."
                 />
             </div>
         );

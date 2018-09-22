@@ -4,6 +4,7 @@ import MapCard from "./MapCard";
 import { connect } from "react-redux";
 // import SearchForm from "./SearchForm";
 // import { getAllListings, getAllListingsFromQuery } from "../ajax/listings"
+import TopBarMap from "./TopBarMap";
 
 class MainMap extends Component {
     constructor(props) {
@@ -134,6 +135,7 @@ class MainMap extends Component {
     render() {
         return (
             <div>
+                <TopBarMap />
                 {/* temporary search box below */}
                 {/* <SearchForm handleSearchSubmit={this.handleSearchSubmit} /> */}
                 {this.props.listings && (
