@@ -6,15 +6,7 @@ import Navbar from "./components/Navbar";
 import Help from "./components/Help";
 import AboutUs from "./components/AboutUs";
 import Team from "./components/Team";
-import * as Scroll from "react-scroll";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
+import { Element } from "react-scroll";
 
 class App extends Component {
   componentDidMount() {

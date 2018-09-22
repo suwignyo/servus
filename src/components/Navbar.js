@@ -1,14 +1,6 @@
 import React, { Component } from "react";
 import "../styles/Navbar.css";
-import * as Scroll from "react-scroll";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
+import { scroller } from "react-scroll";
 
 class Navbar extends Component {
   scrollToHome = () => {
