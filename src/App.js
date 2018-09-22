@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./App.css";
 import { testingRedux } from "./actions/userActions";
+import MainMap from "./components/MainMap";
+
+
 
 class App extends Component {
     componentDidMount() {
@@ -18,6 +21,9 @@ class App extends Component {
                     To get started, edit <code>src/App.js</code> and save to
                     reload.
                 </p>
+                <div>
+                <MainMap />
+                </div>
             </div>
         );
     }
