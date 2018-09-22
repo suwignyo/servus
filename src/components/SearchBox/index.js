@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./SearchBox.css";
+import { Link } from "@reach/router";
 
 import SelectLanguage from "./SelectLanguage";
 import SelectService from "./SelectService";
@@ -22,7 +23,9 @@ export default class index extends Component {
             <input className="input-box" />
           </div>
           <div className="find-button">
-            <button className="search-button">FIND</button>
+            <Link to="/search">
+              <button className="search-button">FIND</button>
+            </Link>
           </div>
         </div>
       </div>
