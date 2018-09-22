@@ -1,14 +1,32 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 class MapCard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { dropDownVisible: false };
+    }
+
     componentDidMount() {
         console.log(this.props.data.img);
     }
+    handleClick = () => {
+        this.setState({ dropDownVisible: !this.state.dropDownVisible });
+    };
     render() {
+        let dropdown = (
+            <div className="dropdown-info">
+                <div>{this.props.data.office}</div>
+                <div>Address: {this.props.data.address}</div>
+                <div>Hours: {this.props.data.hours}</div>
+                <div>Phone: {this.props.data.phone}</div>
+                <div>Website: {this.props.data.website}</div>
+                <button>Direct Me</button>
+            </div>
+        );
         return (
             <div>
-                <div className="listing-map-card">
+                <div className="listing-map-card" onClick={this.handleClick}>
                     <div className="listing-map-img-container">
                         <img src={this.props.data.img} alt="doctor image" />
                     </div>
@@ -31,6 +49,13 @@ class MapCard extends Component {
                         <div>{this.props.data.office}</div>
                     </div>
                 </div>
+                <ReactCSSTransitionGroup
+                    transitionName="example"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}
+                >
+                    {this.state.dropDownVisible ? dropdown : null}
+                </ReactCSSTransitionGroup>
             </div>
         );
     }
