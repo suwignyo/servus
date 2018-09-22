@@ -1,26 +1,62 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "../styles/Map.css";
-
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 class MapCard extends Component {
-  componentDidMount() {
-    console.log(this.props.data.img);
-  }
-  render() {
-    return (
-      <div>
-        <div className="listing-map-card">
-          <div className="listing-map-img-container">
-            <img
-              className="prof-pic"
-              src={this.props.data.img}
-              alt="doctor image"
-            />
-          </div>
-          <div className="listing-map-info-container">
-            <div className="doctor-distance">
-              <div className="doctor-name">{this.props.data.name}</div>
-              <div className="distance-away">500m</div>
+    constructor(props) {
+        super(props);
+        this.state = { dropDownVisible: false };
+    }
+
+    componentDidMount() {
+        console.log(this.props.data.img);
+    }
+    handleClick = () => {
+        this.setState({ dropDownVisible: !this.state.dropDownVisible });
+    };
+    render() {
+        let dropdown = (
+            <div className="dropdown-info">
+                <div>{this.props.data.office}</div>
+                <div>Address: {this.props.data.address}</div>
+                <div>Hours: {this.props.data.hours}</div>
+                <div>Phone: {this.props.data.phone}</div>
+                <div>Website: {this.props.data.website}</div>
+                <button>Direct Me</button>
+            </div>
+        );
+        return (
+            <div>
+                <div className="listing-map-card" onClick={this.handleClick}>
+                    <div className="listing-map-img-container">
+                        <img className="prof-pic" src={this.props.data.img} alt="doctor image" />
+                    </div>
+                    <div className="listing-map-info-container">
+                        <div>
+                            <div className="doctor-name">
+                                {this.props.data.name}
+                            </div>
+                            <div className="distance-away">500m</div>
+                        </div>
+                        <div>
+                            <div className="service">
+                                {this.props.data.service}
+                            </div>
+                            <div className="languages-heading">Languages</div>
+                        </div>
+                        <div className="langauges-spoken">
+                            {this.props.data.languages.join(", ")}
+                        </div>
+                        <div>{this.props.data.office}</div>
+                    </div>
+                </div>
+                <ReactCSSTransitionGroup
+                    transitionName="example"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}
+                >
+                    {this.state.dropDownVisible ? dropdown : null}
+                </ReactCSSTransitionGroup>
             </div>
             <div className="service-language">
               <div className="service">{this.props.data.service}</div>
