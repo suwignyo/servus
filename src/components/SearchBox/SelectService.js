@@ -17,6 +17,9 @@ class SelectService extends Component {
     handleSelectService = service => {
         this.props.setService(service);
     };
+    clearCategory = () => {
+        this.setState({ category: "" });
+    };
     render() {
         let services;
         if (this.state.category === "Cultural") {
@@ -72,6 +75,9 @@ class SelectService extends Component {
         }
         return (
             <div>
+                {this.state.category && (
+                    <span onClick={this.clearCategory}>X TO GO BACK</span>
+                )}
                 {this.state.category ? (
                     <div />
                 ) : (

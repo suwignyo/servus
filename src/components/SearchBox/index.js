@@ -18,9 +18,9 @@ export default class index extends Component {
                 </div>
                 <div>
                     <p>Location</p>
-                    <p>Input</p>
+                    <input />
                 </div>
-                <div>
+                <div className="find-button">
                     <p>Find</p>
                 </div>
             </div>

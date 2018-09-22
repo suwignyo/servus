@@ -14,7 +14,8 @@ const initialState = {
         { value: "Arabic", label: "Arabic" }
     ],
     languageSelected: "",
-    serviceSelected: ""
+    serviceSelected: "",
+    address: { longitude: 43.6598295, latitude: -79.3886319 }
 };
 
 export default function(state = initialState, action) {
