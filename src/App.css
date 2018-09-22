@@ -23,11 +23,64 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .map-container {
-  height:92vh;
+  height: 92vh;
   width: 60vw;
+}
+
+.listing-map-img-container {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.listing-map-img-container .img {
+  object-fit: cover;
+  flex: 1;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+
+.listing-map-card {
+  background: white;
+  margin-bottom: 1rem;
+  height: 12rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #dddddd;
+  box-shadow: 0.1rem 0.1rem 0.1rem #aaaaaa;
+  transition: background 0.6s;
+}
+
+.map-listings-container {
+  margin-top: 3rem;
+  margin-left: 60vw;
+  width: 40vw;
+  /* min-height: 100vh; */
+  padding: 1.5rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  background: #eeeeee;
+}
+
+.listing-map-info-container {
+  height: 100%;
+}
+
+.listing-map-info-container .h4 {
+  font-size: 1.1rem;
+  margin: 0;
+
 }

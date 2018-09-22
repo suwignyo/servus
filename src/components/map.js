@@ -1,6 +1,6 @@
 import React from "react";
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
-// import RentalMarker from "./RentalMarker"
+// import MapMarker from "./MapMarker"
 
 const MapComponent = withScriptjs(withGoogleMap((props) => {
   // const listingMarkers = props.listings.map((elem, i) => {
@@ -10,7 +10,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) => {
     //then set showInfoBox to true so that it is rendered
     // const showInfoBox = props.activeInfoBoxId === elem.id ? true : false;
     // return (
-      // <RentalMarker
+      // <MapMarker
       //   key={i}
       //   id={elem.id}
       //   photo={elem.photos[0]}
