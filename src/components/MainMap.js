@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MapComponent from "./map";
 import MapCard from "./MapCard";
+import { connect } from "react-redux";
 // import SearchForm from "./SearchForm";
 // import { getAllListings, getAllListingsFromQuery } from "../ajax/listings"
 
@@ -126,14 +127,18 @@ class MainMap extends Component {
     //   })
     // }
 
+    componentDidMount() {
+        console.log(this.props.listings);
+    }
+
     render() {
         return (
             <div>
                 {/* temporary search box below */}
                 {/* <SearchForm handleSearchSubmit={this.handleSearchSubmit} /> */}
-                {this.state.listings && (
+                {this.props.listings && (
                     <MapComponent
-                        listings={this.state.listings}
+                        listings={this.props.listings}
                         googleMapURL={this.state.googleMapURL}
                         loadingElement={<div />}
                         containerElement={
@@ -151,8 +156,8 @@ class MainMap extends Component {
                     />
                 )}
                 <div className="map-listings-container">
-                    {this.state.listings &&
-                        this.state.listings.map((elem, i) => (
+                    {this.props.listings &&
+                        this.props.listings.map((elem, i) => (
                             <MapCard key={i} id={elem.id} data={elem} />
                         ))}
                     {this.state.noResults && (
@@ -164,4 +169,11 @@ class MainMap extends Component {
     }
 }
 
-export default MainMap;
+const mapStateToProps = state => ({
+    listings: state.fetch.results
+});
+
+export default connect(
+    mapStateToProps,
+    null
+)(MainMap);
