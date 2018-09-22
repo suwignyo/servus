@@ -16,6 +16,8 @@ class App extends Component {
         return (
             <div className="App">
                 <header className="App-header">
+                <Main />
+
                     <h1 className="App-title">Welcome to Servus</h1>
                 </header>
                 <p className="App-intro">
@@ -28,20 +30,8 @@ class App extends Component {
             </div>
         );
     }
+  }
 
-class App extends Component {
-  componentDidMount() {
-    console.log("Hi");
-    this.props.testingRedux("asdggs");
-  }
-  render() {
-    return (
-      <div className="App">
-        <Main />
-      </div>
-    );
-  }
-}
 
 const mapStateToProps = state => ({
   user: state.user.test
