@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./App.css";
 import { testingRedux } from "./actions/userActions";
-import Background from "./components/Background/";
+import Main from "./components/Main/";
 
 class App extends Component {
     componentDidMount() {
@@ -12,7 +12,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Background />
+                <Main />
             </div>
         );
     }

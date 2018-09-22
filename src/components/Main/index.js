@@ -1,12 +1,15 @@
 import React, { Component } from "react";
-import "./Background.css";
-import backgroundimage from "../../assets/background-image.png";
+import "./Main.css";
 
-export default class Background extends Component {
+import SearchBox from "../SearchBox/";
+
+export default class Main extends Component {
     render() {
         return (
             <div className="background-container">
-                <img src={backgroundimage} alt="background" />
+                <div className="search-box-container">
+                    <SearchBox />
+                </div>
                 <div className="bottom">
                     <p>Canada prides itself</p>
                 </div>
