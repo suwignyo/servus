@@ -44,7 +44,7 @@ class Navbar extends Component {
           <div className="link" onClick={this.scrollToTeam}>
             TEAM
           </div>
-          <div className="link" onClick={this.scrollToHelp}>
+          <div className="link help-link" onClick={this.scrollToHelp}>
             HELP
           </div>
         </div>
