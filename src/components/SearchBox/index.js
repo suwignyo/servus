@@ -1,23 +1,26 @@
 import React, { Component } from "react";
 import "./SearchBox.css";
 
+import SelectLanguage from "./SelectLanguage";
+import SelectService from "./SelectService";
+
 export default class index extends Component {
     render() {
         return (
             <div className="search-box">
-                <div className="language-box">
+                <div>
                     <p>Language</p>
-                    <p>English</p>
+                    <SelectLanguage />
                 </div>
                 <div>
                     <p>Service</p>
-                    <p>Boxes</p>
+                    <SelectService />
                 </div>
                 <div>
                     <p>Location</p>
-                    <p>Input</p>
+                    <input />
                 </div>
-                <div>
+                <div className="find-button">
                     <p>Find</p>
                 </div>
             </div>
