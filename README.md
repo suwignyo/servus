@@ -2,7 +2,7 @@
 
 Servus aims to provide accessibility to cultural and professional services for non-official language speakers. Tap into your cultural communities and becomfortable!
 
-![ServUs](https://raw.githubusercontent.com/teeaaspoon/servus/master/src/assets/servus.gif)
+![ServUs](https://raw.githubusercontent.com/teeaaspoon/servus/master/src/assets/serv-us.gif)
 
 ## Setup
 
