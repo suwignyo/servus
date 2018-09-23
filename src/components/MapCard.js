@@ -17,12 +17,24 @@ class MapCard extends Component {
   render() {
     let dropdown = (
       <div className="dropdown-info">
-        <div>{this.props.data.office}</div>
-        <div>Address: {this.props.data.address}</div>
-        <div>Hours: {this.props.data.hours}</div>
-        <div>Phone: {this.props.data.phone}</div>
-        <div>Website: {this.props.data.website}</div>
-        <button>Direct Me</button>
+        <div className="office">
+          <strong>{this.props.data.office}</strong>
+        </div>
+        <div className="details address">
+          <strong>Address:</strong> {this.props.data.address}
+        </div>
+        <div className="details hours">
+          <strong>Hours:</strong> {this.props.data.hours}
+        </div>
+        <div className="details phone">
+          <strong>Phone:</strong> {this.props.data.phone}
+        </div>
+        <div className="details website">
+          <strong>Website:</strong> {this.props.data.website}
+        </div>
+        <div className="direct-container">
+          <button className="direct-button">Direct Me</button>
+        </div>
       </div>
     );
     return (
