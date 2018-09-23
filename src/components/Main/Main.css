@@ -20,14 +20,18 @@ img {
 } */
 .bottom {
     display: flex;
-    background-color: #cffcff;
+    background-color: #aaefdf;
     justify-content: center;
     align-items: center;
     min-height: 30vh;
 }
 
 .bottom p {
-    font-size: 5rem;
+    font-size: 3rem;
+}
+
+.bottom span {
+    color: #67bd45;
 }
 
 .text-carousel {
