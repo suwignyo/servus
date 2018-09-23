@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "../styles/Map.css";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import classNames from "classnames"
 
 class MapCard extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class MapCard extends Component {
     console.log(this.props.data.img);
   }
   handleClick = () => {
+    this.props.setActive(this.props.data.id)
     this.setState({ dropDownVisible: !this.state.dropDownVisible });
   };
   render() {
@@ -40,14 +42,16 @@ class MapCard extends Component {
     );
     return (
       <div >
-        <div className="listing-map-card" onClick={this.handleClick} className={(this.props.activeCard) ? "activeCard":"defaultCard"}>
-          {/* {this.props.activeCard && "this is the active card"} */}
+        <div className="listing-map-card" onClick={this.handleClick} className={classNames({adCard:this.props.ad}, {activeCard:this.props.activeCard}, {defaultCard:!this.props.activeCard})}>
           <div className="listing-map-img-container">
-            <img
-              className="prof-pic"
-              src={this.props.data.img}
-              alt="doctor image"
-            />
+            <div>
+              <div className="ad-title"><strong>{this.props.ad && "Ad"}</strong></div>
+              <img
+                className="prof-pic"
+                src={this.props.data.img}
+                alt="doctor image"
+              />
+            </div>
           </div>
           <div className="listing-map-info-container">
             <div className="doctor-distance">
@@ -69,7 +73,7 @@ class MapCard extends Component {
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}
         >
-          {this.state.dropDownVisible ? dropdown : null}
+          {(this.state.dropDownVisible && this.props.activeCard) ? dropdown : null}
         </ReactCSSTransitionGroup>
       </div>
     );

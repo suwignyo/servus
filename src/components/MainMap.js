@@ -22,17 +22,21 @@ class MainMap extends Component {
     };
   }
   handleMarkerClick = id => {
-    this.setState({
-      activeMarker: id,
-      activeCard: id,
-      toggleAnimation: !this.state.toggleAnimation
-    });
+    this.setActive(id)
     let elem_id = this.state.activeCard.toString();
     const options = {
       smooth: true
     };
     scroller.scrollTo(elem_id, options);
   };
+
+  setActive = id => {
+    this.setState({
+      activeMarker: id,
+      activeCard: id,
+      toggleAnimation: !this.state.toggleAnimation
+    });
+  }
 
   render() {
     return (
@@ -64,12 +68,12 @@ class MainMap extends Component {
               this.props.listings.map((elem, i) => (
                 <Element name={elem.id}>
                   <MapCard
+                    setActive={this.setActive}
                     key={i}
                     id={elem.id}
                     data={elem}
-                    activeCard={
-                      elem.id === this.state.activeCard ? true : false
-                    }
+                    activeCard={elem.id === this.state.activeCard ? true : false}
+                    ad={elem.id === 1 ? true : false}
                   />
                 </Element>
               ))}
