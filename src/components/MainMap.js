@@ -26,19 +26,19 @@ class MainMap extends Component {
     //     })
     // }
 
-    toggleMarker = key => {
-        this.handleMarkerClick(key);
-        this.setState({ showListingBox: true, clickedMarker: true });
-    };
+    // toggleMarker = key => {
+    //     this.handleMarkerClick(key);
+    //     this.setState({ showListingBox: true, clickedMarker: true });
+    // };
 
-    removeListingBoxFromMap = () => {
-        const clickedMarker = this.state.clickedMarker;
-        if (clickedMarker === true) {
-            this.setState({ clickedMarker: false });
-        } else {
-            this.setState({ showListingBox: false });
-        }
-    };
+    // removeListingBoxFromMap = () => {
+    //     const clickedMarker = this.state.clickedMarker;
+    //     if (clickedMarker === true) {
+    //         this.setState({ clickedMarker: false });
+    //     } else {
+    //         this.setState({ showListingBox: false });
+    //     }
+    // };
 
     handleMarkerClick = key => {
         this.setState({
