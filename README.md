@@ -4,6 +4,9 @@ Servus aims to provide accessibility to cultural and professional services for n
 
 Build during Elevate Hackhathon 2018
 
+
+![ServUs](https://raw.githubusercontent.com/teeaaspoon/servus/master/src/assets/servus.gif)
+
 ## Setup
 
 - Clone the repo to your local machine.
