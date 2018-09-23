@@ -33,7 +33,10 @@ export default class Main extends Component {
 
                 <Navbar />
                 <div className="bottom">
-                    <p>Canada prides itself</p>
+                    <p>
+                        Never struggle to find services in your{" "}
+                        <span>home language.</span>
+                    </p>
                 </div>
                 <Element name="AboutUs" className="element">
                     <AboutUs />
