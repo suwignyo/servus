@@ -2,9 +2,6 @@
 
 Servus aims to provide accessibility to cultural and professional services for non-official language speakers. Tap into your cultural communities and becomfortable!
 
-Build during Elevate Hackhathon 2018
-
-
 ![ServUs](https://raw.githubusercontent.com/teeaaspoon/servus/master/src/assets/servus.gif)
 
 ## Setup
