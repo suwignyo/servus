@@ -5,7 +5,7 @@
 
 .search-box-container {
     width: 100%;
-    min-height: 80vh;
+    min-height: 70vh;
     background-image: url("../../assets/background-image.png");
     background-size: cover;
 }
@@ -23,7 +23,7 @@ img {
     background-color: #aaefdf;
     justify-content: center;
     align-items: center;
-    min-height: 20vh;
+    min-height: 30vh;
 }
 
 .bottom p {
