@@ -37,7 +37,9 @@ class MapCard extends Component {
           <strong>Website:</strong> {this.props.data.website}
         </div>
         <div className="direct-container">
-          <button className="direct-button">Direct Me</button>
+          <a href={`https://www.google.com/maps?saddr=111+College+St,Toronto,ON+M5G+1L7&daddr=${this.props.data.address}`}>
+            <button className="direct-button">Direct Me</button>
+          </a>
         </div>
       </div>
     );
