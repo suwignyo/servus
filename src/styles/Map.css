@@ -151,3 +151,27 @@
     border-radius: 15px;
     border: none;
 }
+
+.activeCard{
+  border: 3px solid green;
+  background: white;
+  height: 12rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem #aaaaaa;
+  transition: background 0.6s;
+}
+
+.defaultCard{
+  background: white;
+  height: 12rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #dddddd;
+  box-shadow: 0.1rem 0.1rem 0.1rem #aaaaaa;
+  transition: background 0.6s;
+}

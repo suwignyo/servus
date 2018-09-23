@@ -39,9 +39,9 @@ class MapCard extends Component {
       </div>
     );
     return (
-      <div>
-        <div className="listing-map-card" onClick={this.handleClick}>
-          {this.props.activeCard && "this is the active card"}
+      <div >
+        <div className="listing-map-card" onClick={this.handleClick} className={(this.props.activeCard) ? "activeCard":"defaultCard"}>
+          {/* {this.props.activeCard && "this is the active card"} */}
           <div className="listing-map-img-container">
             <img
               className="prof-pic"

@@ -33,10 +33,11 @@ const MapComponent = withScriptjs(
       <div>
         <TopBarMap />
         <GoogleMap
-          defaultZoom={15}
+          defaultZoom={16}
           defaultCenter={{ lat: 43.659805, lng: -79.388786 }}
         >
-          {props.listings && listingMarkers}
+          {props.listings && listingMarkers}      
+
         </GoogleMap>
       </div>
     );
