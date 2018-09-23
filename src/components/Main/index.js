@@ -10,41 +10,42 @@ import { Switch, Route } from "react-router-dom";
 var ReactRotatingText = require("react-rotating-text");
 
 export default class Main extends Component {
-    render() {
-        return (
-            <div className="background-container">
-                <div className="search-box-container">
-                    <SearchBox />
-                    <div className="text-carousel">
-                        <p>
-                            Find <span className="your-text">your </span>
-                            <ReactRotatingText
-                                className="rotating-text"
-                                items={[
-                                    "doctor. ",
-                                    "lawyer. ",
-                                    "accountant. ",
-                                    "dentist. "
-                                ]}
-                            />
-                        </p>
-                    </div>
-                </div>
+  constructor(props) {
+    super(props);
+    this.state = {
+      navclass: "home"
+    };
+  }
+  render() {
+    return (
+      <div className="background-container">
+        <div className="search-box-container">
+          <SearchBox />
+          <div className="text-carousel">
+            <p>
+              Find <span className="your-text">your </span>
+              <ReactRotatingText
+                className="rotating-text"
+                items={["doctor. ", "lawyer. ", "accountant. ", "dentist. "]}
+              />
+            </p>
+          </div>
+        </div>
 
-                <Navbar />
-                <div className="bottom">
-                    <p>Canada prides itself</p>
-                </div>
-                <Element name="AboutUs" className="element">
-                    <AboutUs />
-                </Element>
-                <Element name="Team" className="element">
-                    <Team />
-                </Element>
-                <Element name="Help" className="element">
-                    <Help />
-                </Element>
-            </div>
-        );
-    }
+        <Navbar navclass={this.state.navclass} />
+        <div className="bottom">
+          <p>Canada prides itself</p>
+        </div>
+        <Element name="AboutUs" className="element">
+          <AboutUs />
+        </Element>
+        <Element name="Team" className="element">
+          <Team />
+        </Element>
+        <Element name="Help" className="element">
+          <Help />
+        </Element>
+      </div>
+    );
+  }
 }

@@ -23,13 +23,21 @@
 }
 
 .top-bar-location {
-
+    font-family: 'Raleway', sans-serif
 }
 
 .top-bar-service {
-    width: 33%;
+    width: 20%;
+    font-family: 'Raleway', sans-serif
 }
 
 .top-bar-language {
     width: 33%;
+    font-family: 'Raleway', sans-serif
+}
+
+.map-location-input {
+    height: 32px;
+    font-size: larger;
+    font-family: 'Hind-Guntur', sans-serif
 }

@@ -1,8 +1,15 @@
 import React, { Component } from "react";
 import "../styles/Navbar.css";
 import { scroller } from "react-scroll";
+import classNames from "classnames";
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navclass: this.props.navclass
+    };
+  }
   scrollToHome = () => {
     const options = {
       smooth: true
@@ -33,7 +40,12 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div className="navbar">
+      <div
+        className={classNames(
+          { navbar: this.state.navclass === "home" },
+          { navclass: this.props.navclass === "map" }
+        )}
+      >
         <div className="title" onClick={this.scrollToHome}>
           SERVUS
         </div>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "../styles/Map.css";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import classNames from "classnames";
 
 class MapCard extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class MapCard extends Component {
   }
   handleClick = () => {
     this.setState({ dropDownVisible: !this.state.dropDownVisible });
+    console.log(this.state.dropDownVisible);
   };
   render() {
     let dropdown = (
@@ -39,8 +41,12 @@ class MapCard extends Component {
       </div>
     );
     return (
-      <div >
-        <div className="listing-map-card" onClick={this.handleClick} className={(this.props.activeCard) ? "activeCard":"defaultCard"}>
+      <div>
+        <div
+          className="listing-map-card"
+          onClick={this.handleClick}
+          className={this.props.activeCard ? "activeCard" : "defaultCard"}
+        >
           {/* {this.props.activeCard && "this is the active card"} */}
           <div className="listing-map-img-container">
             <img
@@ -62,6 +68,13 @@ class MapCard extends Component {
               {this.props.data.languages.join(", ")}
             </div>
             <div className="office">{this.props.data.office}</div>
+            <div className="angle-down">
+              {this.state.dropDownVisible ? (
+                <i class="fas fa-angle-up" />
+              ) : (
+                <i class="fas fa-angle-down" />
+              )}
+            </div>
           </div>
         </div>
         <ReactCSSTransitionGroup
