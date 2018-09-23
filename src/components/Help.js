@@ -15,7 +15,7 @@ class Help extends Component {
         return (
             <div className="help">
                 <form className="form-labels-on-top" method="post" action="#">
-                    <div class="form-title-row">
+                    <div className="form-title-row">
                         <h1>List Your Service</h1>
                     </div>
                     <div className="form-row">
