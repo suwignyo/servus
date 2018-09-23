@@ -6,7 +6,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed
+    position: fixed;
+    font-family: 'Lato', sans-serif;
 }
 
 .links {
@@ -15,4 +16,16 @@
 
 .link {
     padding: 1rem;
+    font-weight: lighter;
+    font-size: 1.5rem;  
+}
+
+.help-link {
+    padding-right: 6rem;
+}
+
+.title {
+    padding: 1.5rem 1.5rem 1.5rem 6rem;
+    font-size: 1.75rem;
+    font-weight: lighter;
 }

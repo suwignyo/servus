@@ -6,6 +6,8 @@ import Help from "../Help";
 import AboutUs from "../AboutUs";
 import Team from "../Team";
 import SearchBox from "../SearchBox/";
+import { Switch, Route } from "react-router-dom";
+
 export default class Main extends Component {
   render() {
     return (

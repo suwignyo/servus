@@ -30,7 +30,7 @@ const initialState = {
             img:
                 "https://healthy.kaiserpermanente.org/health/PA_MyDoctor/PhotoProvider?id=9481791",
 
-            lng: -79.39494,
+            lng: -79.39204,
             lat: 43.644576
         }
     ]
