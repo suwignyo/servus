@@ -18,7 +18,8 @@ class MainMap extends Component {
     this.state = {
       toggleAnimation: false,
       activeMarker: null,
-      googleMapURL: `https://maps.googleapis.com/maps/api/js?key=AIzaSyCwRlvwiZDMwFNadu7tARjDyqqPDVZ5whw&v=3.exp&libraries=geometry,drawing,places`
+      googleMapURL: `https://maps.googleapis.com/maps/api/js?key=AIzaSyCwRlvwiZDMwFNadu7tARjDyqqPDVZ5whw&v=3.exp&libraries=geometry,drawing,places`,
+      navclass: "map"
     };
   }
   handleMarkerClick = id => {
@@ -36,8 +37,8 @@ class MainMap extends Component {
 
   render() {
     return (
-      <div>
-        <Navbar />
+      <div className="main-map-container">
+        <Navbar navclass={this.state.navclass} />
         <div className="main-map">
           {/* <TopBarMap /> */}
           {/* temporary search box below */}
@@ -47,11 +48,7 @@ class MainMap extends Component {
               listings={this.props.listings}
               googleMapURL={this.state.googleMapURL}
               loadingElement={<div />}
-              containerElement={
-                <div
-                  className="map-container"
-                />
-              }
+              containerElement={<div className="map-container" />}
               mapElement={<div style={{ height: `100%` }} />}
               handleMarkerClick={this.handleMarkerClick}
               activeMarker={this.state.activeMarker}
