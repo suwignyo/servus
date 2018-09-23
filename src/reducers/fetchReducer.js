@@ -59,8 +59,8 @@ const initialState = {
             phone: "416-551-6006",
             website: "https://www.torendoscopy.ca/",
             img: "https://healthy.kaiserpermanente.org/health/PA_MyDoctor/PhotoProvider?id=9481791",
-            lng: -79.385999,
-            lat: 43.660606
+            lng: -79.384596,
+            lat: 43.658821
         },
         {
           id: 5,
