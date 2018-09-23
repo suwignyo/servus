@@ -6,7 +6,7 @@ const initialState = {
         { value: "English", label: "English" },
         { value: "Korean", label: "Korean" },
         { value: "Vietnamese", label: "Vietnamese" },
-        { value: "Chinese", label: "Chinese" },
+        { value: "Mandarin", label: "Mandarin" },
         { value: "Spanish", label: "Spanish" },
         { value: "Tamil", label: "Tamil" },
         { value: "Punjabi", label: "Punjabi" },

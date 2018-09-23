@@ -1,5 +1,34 @@
-.team {
+.team-container {
     height: 50vh;
     background-color: olive;
     padding-top: 80px;
+}
+.team {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.team-member {
+    margin: 2rem;
+}
+
+.team-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+}
+
+.team-member p {
+    text-align: center;
+}
+
+.team-member-name {
+    font-weight: bold;
+}
+
+.team-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
 }
