@@ -19,12 +19,7 @@ const MapComponent = withScriptjs(
         <MapMarker
           key={i}
           id={elem.id}
-          // photo={elem.photos[0]}
           position={position}
-          // price={elem.price}
-          // bedrooms={elem.bedrooms}
-          // bathrooms={elem.bathrooms}
-          // address={elem.street + ", " + elem.city}
           animation = { props.animation }
           handleMarkerClick = { props.handleMarkerClick }
           showListingBox = { props.showListingBox }
@@ -35,11 +30,10 @@ const MapComponent = withScriptjs(
 
         return (
             <GoogleMap
-                defaultZoom={12}
-                defaultCenter={{ lat: 43.6532, lng: -79.3832 }}
+                defaultZoom={15}
+                defaultCenter={{ lat: 43.659805, lng: -79.388786}}
             >
                 {props.listings && listingMarkers}
-                {/* {<Marker position={{ lat: 43.6532, lng: -79.3832 }} />} */}
             </GoogleMap>
         );
     })

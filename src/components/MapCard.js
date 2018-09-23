@@ -50,7 +50,7 @@ class MapCard extends Component {
           <div className="listing-map-info-container">
             <div className="doctor-distance">
               <div className="doctor-name">{this.props.data.name}</div>
-              <div className="distance-away">500m</div>
+              <div className="distance-away">{this.props.data.distance}</div>
             </div>
             <div className="service-language">
               <div className="service">{this.props.data.service}</div>
