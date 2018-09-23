@@ -16,6 +16,7 @@ class MapCard extends Component {
   handleClick = () => {
     this.props.setActive(this.props.data.id)
     this.setState({ dropDownVisible: !this.state.dropDownVisible });
+    console.log(this.state.dropDownVisible);
   };
   render() {
     let dropdown = (
@@ -66,6 +67,13 @@ class MapCard extends Component {
               {this.props.data.languages.join(", ")}
             </div>
             <div className="office">{this.props.data.office}</div>
+            <div className="angle-down">
+              {this.state.dropDownVisible ? (
+                <i class="fas fa-angle-up" />
+              ) : (
+                <i class="fas fa-angle-down" />
+              )}
+            </div>
           </div>
         </div>
         <ReactCSSTransitionGroup

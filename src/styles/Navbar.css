@@ -10,6 +10,19 @@
     font-family: 'Lato', sans-serif;
 }
 
+.navclass {
+    height: 80px;
+    width: 100%;
+    background-color: none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    font-family: 'Lato', sans-serif;
+    background-image: url("../assets/background-image.png");
+}
+
 .links {
     display: flex;
 }

@@ -6,7 +6,7 @@ const initialState = {
         { value: "English", label: "English" },
         { value: "Korean", label: "Korean" },
         { value: "Vietnamese", label: "Vietnamese" },
-        { value: "Chinese", label: "Chinese" },
+        { value: "Mandarin", label: "Mandarin" },
         { value: "Spanish", label: "Spanish" },
         { value: "Tamil", label: "Tamil" },
         { value: "Punjabi", label: "Punjabi" },
@@ -20,11 +20,6 @@ const initialState = {
 
 export default function(state = initialState, action) {
     switch (action.type) {
-        case TEST:
-            return {
-                ...state,
-                test: action.payload
-            };
         case SET_LANGUAGE:
             return {
                 ...state,

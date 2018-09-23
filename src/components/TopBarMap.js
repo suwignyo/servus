@@ -26,7 +26,7 @@ class TopBarMap extends Component {
       <div className="top-bar-map">
         <div className="top-bar-location">
           <div>Location</div>
-          <input value="111 College Street" />
+          <input className="map-location-input" value="111 College Street" />
         </div>
         <div className="top-bar-service" onClick={this.showModal}>
           <div>Service</div>

@@ -1,5 +1,30 @@
 .aboutus {
     height: 50vh;
-    background-color: aquamarine;
-    padding-top: 80px;
+    background-color: #e3e3e3;
+    padding-top: 50px;
+    text-align: center;
+    color: black;
+}
+
+.about-section-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-about-us {
+    width: 50%;
+    padding: 4rem;
+}
+
+.right-about-us {
+    width: 50%;
+    padding: 4rem;
+}
+
+.aboutus-heading h1 {
+    font-size: 2.5rem;
+}
+.aboutus-heading p {
+    padding: 0 5%;
+    font-size: 1.5rem;
 }

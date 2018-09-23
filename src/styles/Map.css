@@ -43,7 +43,7 @@
 
 .map-listings-container {
     width: 40vw;
-    max-height: calc (100vh-80px);
+    max-height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     background: #eeeeee;
@@ -129,7 +129,11 @@
 }
 
 .main-map{
-    display: flex
+    display: flex;
+}
+
+.main-map-container {
+
 }
 
 .details {
@@ -155,13 +159,13 @@
 }
 
 .activeCard{
-  border: 3px solid green !important;
+  border: 3px solid #aaefdf !important;
   background: white;
   height: 12rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem;
+  margin-left: 1rem;
   box-shadow: 0.1rem 0.1rem 0.1rem #aaaaaa;
   transition: background 0.6s;
 }
@@ -172,7 +176,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem;
+  margin-left: 1rem;
   border: 1px solid #dddddd;
   box-shadow: 0.1rem 0.1rem 0.1rem #aaaaaa;
   transition: background 0.6s;
@@ -196,4 +200,8 @@
 .ad-title{
   color: yellowgreen;
   font-family: 'Raleway', sans-serif;
+}
+.angle-down{
+   padding-left: 5rem;
+   font-size: larger;
 }
