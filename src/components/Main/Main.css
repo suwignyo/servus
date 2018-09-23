@@ -10,7 +10,7 @@
     background-size: auto;
 }
 
-.search-box{
+.search-box {
     margin-top: 80px;
 }
 /* 
@@ -23,9 +23,25 @@ img {
     background-color: #cffcff;
     justify-content: center;
     align-items: center;
-    min-height: 30vh
+    min-height: 30vh;
 }
 
 .bottom p {
     font-size: 5rem;
+}
+
+.text-carousel {
+    font-size: 4rem;
+    color: white;
+    margin-left: 50%;
+    transform: translateY(-80px);
+}
+
+.text-carousel .your-text {
+    color: #67bd45;
+}
+
+.rotating-text span {
+    font-size: 4rem;
+    color: white;
 }
