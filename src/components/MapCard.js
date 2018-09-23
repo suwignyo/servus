@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "../styles/Map.css";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+
 class MapCard extends Component {
   constructor(props) {
     super(props);
@@ -40,6 +41,7 @@ class MapCard extends Component {
     return (
       <div>
         <div className="listing-map-card" onClick={this.handleClick}>
+          {this.props.activeCard && "this is the active card"}
           <div className="listing-map-img-container">
             <img
               className="prof-pic"
