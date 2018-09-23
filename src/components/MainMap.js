@@ -15,55 +15,17 @@ class MainMap extends Component {
             googleMapURL: `https://maps.googleapis.com/maps/api/js?key=AIzaSyCwRlvwiZDMwFNadu7tARjDyqqPDVZ5whw&v=3.exp&libraries=geometry,drawing,places`
         };
     }
-
-    // handleSearchSubmit = (queryObj) => {
-    //   getAllListingsFromQuery(queryObj)
-    //     .then(listings => {
-    //       const noResults = listings.length === 0;
-    //       this.setState({
-    //         listings,
-    //         noResults,
-    //       })
-    //     })
-    // }
-
-    toggleMarker = key => {
-        this.handleMarkerClick(key);
-        this.setState({ showListingBox: true, clickedMarker: true });
-    };
-
-    //     removeListingBoxFromMap = () => {
-    //         const clickedMarker = this.state.clickedMarker;
-    //         if (clickedMarker === true) {
-    //             this.setState({ clickedMarker: false });
-    //         } else {
-    //             this.setState({ showListingBox: false });
-    //         }
-    //     ,
-    //       googleMapURL: `https://maps.googleapis.com/maps/api/js?key=AIzaSyCwRlvwiZDMwFNadu7tARjDyqqPDVZ5whw&v=3.exp&libraries=geometry,drawing,places`
-    //     };
-    //   }
-
-    handleMarkerClick = key => {
+    handleMarkerClick = id => {
         this.setState({
-            activeMarker: key,
-            toggleAnimation: true
+            activeMarker: id,
+            activeCard: id,
+            toggleAnimation: !this.state.toggleAnimation
         });
     };
 
-    toggleMarker = key => {
-        this.handleMarkerClick(key);
-        this.setState({ showListingBox: true, clickedMarker: true });
-    };
-
-    removeListingBoxFromMap = () => {
-        const clickedMarker = this.state.clickedMarker;
-        if (clickedMarker === true) {
-            this.setState({ clickedMarker: false });
-        } else {
-            this.setState({ showListingBox: false });
-        }
-    };
+    stopBounceAnimation = () =>{
+      this.setState({activeMarker: null, toggleAnimation: false})
+    }
 
     render() {
         return (
@@ -79,22 +41,20 @@ class MainMap extends Component {
                         containerElement={
                             <div
                                 className="map-container"
-                                onClick={this.removeListingBoxFromMap}
+                                onClick={this.stopBounceAnimation}
                             />
                         }
                         mapElement={<div style={{ height: `100%` }} />}
                         handleMarkerClick={this.handleMarkerClick}
                         activeMarker={this.state.activeMarker}
-                        showListingBox={this.state.showListingBox}
                         toggleAnimation={this.state.toggleAnimation}
                         toggleMarker={this.toggleMarker}
-                        removeListingBoxFromMap={this.removeListingBoxFromMap}
                     />
                 )}
                 <div className="map-listings-container">
                     {this.props.listings &&
                         this.props.listings.map((elem, i) => (
-                            <MapCard key={i} id={elem.id} data={elem} />
+                            <MapCard key={i} id={elem.id} data={elem} activeCard={ (elem.id === this.state.activeCard) ? true: false }/>
                         ))}
                     {this.state.noResults && (
                         <div className="no-results">No Results</div>
