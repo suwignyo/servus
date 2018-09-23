@@ -1,11 +1,4 @@
-import { TEST, SET_LANGUAGE, SET_SERVICE } from "./types";
-
-export const testingRedux = string => dispatch => {
-    dispatch({
-        type: TEST,
-        payload: string
-    });
-};
+import { SET_LANGUAGE, SET_SERVICE } from "./types";
 
 export const setLanguage = language => dispatch => {
     dispatch({
