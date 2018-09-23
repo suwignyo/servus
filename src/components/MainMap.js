@@ -2,10 +2,7 @@ import React, { Component } from "react";
 import MapComponent from "./map";
 import MapCard from "./MapCard";
 import { connect } from "react-redux";
-// import SearchForm from "./SearchForm";
-// import { getAllListings, getAllListingsFromQuery } from "../ajax/listings"
 import Navbar from "../components/Navbar";
-import * as Scroll from "react-scroll";
 import {
   Link,
   Element,
@@ -37,10 +34,6 @@ class MainMap extends Component {
     scroller.scrollTo(elem_id, options);
   };
 
-  stopBounceAnimation = () => {
-    this.setState({ activeMarker: null, toggleAnimation: false });
-  };
-
   render() {
     return (
       <div>
@@ -57,7 +50,6 @@ class MainMap extends Component {
               containerElement={
                 <div
                   className="map-container"
-                  onClick={this.stopBounceAnimation}
                 />
               }
               mapElement={<div style={{ height: `100%` }} />}
